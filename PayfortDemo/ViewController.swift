@@ -72,14 +72,14 @@ class ViewController: UIViewController {
     func getRequestBody() -> [String:Any] {
         let payloadDict = NSMutableDictionary()
         payloadDict.setValue("en", forKey:"language" )
-        payloadDict.setValue("pMpPPeCX", forKey: "merchant_identifier")
-        payloadDict.setValue("BB9WQcrHKVHLZA32wS8g", forKey:"access_code" )
+        payloadDict.setValue("pCeAAeCX", forKey: "merchant_identifier")
+        payloadDict.setValue("BB9WQcrYUYSYUSD32wS8g", forKey:"access_code" )
         payloadDict.setValue("SDK_TOKEN", forKey:"service_command" )
         
         let deviceID = UIDevice.current.identifierForVendor!.uuidString
         payloadDict.setValue(deviceID, forKey:"device_id")
         
-        let paymentString = "TESTSHAINaccess_code=BB9WQcrHKVHLZA32wS8gdevice_id=\(deviceID)language=enmerchant_identifier=pMpPPeCXservice_command=SDK_TOKENTESTSHAIN"
+        let paymentString = "TESTSHAINaccess_code=BB9WQcrYUYSYUSD32wS8ggdevice_id=\(deviceID)language=enmerchant_identifier=pMpPPeCXservice_command=SDK_TOKENTESTSHAIN"
         
         
         let base64Str = paymentString.sha256()
@@ -101,7 +101,7 @@ class ViewController: UIViewController {
             payloadDict.setValue("1000", forKey: "amount")
             payloadDict.setValue("AUTHORIZATION", forKey: "command")
             payloadDict.setValue("AED", forKey: "currency")
-            payloadDict.setValue("saritha.puli@damacgroup.com", forKey: "customer_email")
+            payloadDict.setValue("abcxxxx@damacgroup.com", forKey: "customer_email")
             payloadDict.setValue("en", forKey: "language")
             payloadDict.setValue(marchantRefStr, forKey: "merchant_reference")
             payloadDict.setValue("VISA" , forKey: "payment_option")
